@@ -1,0 +1,410 @@
+/* Estilos personalizados */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    overflow-x: hidden; /* Evita el scroll horizontal*/
+  }
+
+/* Estilos para la superposición negra */
+.overlay {
+  position: fixed; /* Fija la superposición a la ventana */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Color negro */
+  opacity: 1; /* Comienza completamente visible */
+  transition: opacity 2s ease; /* Transición suave */
+  z-index: 2; /* Asegúrate de que esté en la parte superior */
+}
+
+  /* Animación de deslizamiento */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0; /* Comienza invisible */
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1; /* Termina visible */
+  }
+}
+
+/* Barra de navegación */
+.fixed-navbar {
+  position: fixed; /* Mantiene la barra de navegación fija */
+  top: 0; /* Posición en la parte superior */
+  left: 0; /* Alineación a la izquierda */
+  width: 100%; /* Ocupa el ancho completo */
+  z-index: 10; /* Asegúrate de que esté en la parte superior */
+  transition: background-color 0.3s ease; /* Suaviza la transición de fondo */
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro al fijarse */
+}
+  
+  /* Barra de navegación */
+  .navbar-dark .navbar-nav .nav-link.active {
+    color: #0084F4; /* Cambia el color a 0084F4 */
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: #ddd; /* Colores para el resto de las opciones */
+  }
+  
+  .navbar-brand {
+    color: #0084F4; /* Color del logo */
+  }
+  
+  .navbar-dark .navbar-toggler {
+    border-color: #0084F4;
+  }
+  
+  /* Sección Hero */
+  .hero-section {
+    animation: slideDown 1s ease-in-out; /* 1 segundo de duración */
+    background-color: #000; /* Fondo negro */
+    color: #fff;
+    min-height: 100vh;
+    padding-top: 200px; /* Ajusta este valor para mover el texto más arriba */
+    padding-bottom: 50px; /* Añade un margen inferior para crear espacio */
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .neon-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #fff; /* Letras en blanco */
+    text-shadow: 
+      0 0 5px #0084F4,   /* Brillo cerca del texto */
+      0 0 10px #0084F4,  /* Brillo intermedio */
+      0 0 20px #0084F4,  /* Más brillo */
+      0 0 40px #0084F4,  /* Extiende el brillo para el efecto neón */
+      0 0 80px #0084F4;  /* Último nivel de brillo */
+  }
+  
+  .subtext {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #ddd; /* Subtexto en gris claro */
+    text-shadow: 
+        0 0 5px #fff,     /* Brillo cerca del subtexto en blanco */
+        0 0 10px #fff;    /* Brillo intermedio */
+  }
+
+  .btn {
+    margin-top: 15px; /* Espacio superior */
+}
+  
+  /* Imagen del chico */
+  .chico-img {
+    max-width: 100%;
+    height: auto;
+    transform: translateX(100px); /* Mueve la imagen a la derecha */
+    position: relative;
+    right: -50px; /* Desplaza aún más la imagen hacia la derecha */
+    top: -200px; /* Mueve la imagen hacia arriba */
+    z-index: 1; /* Asegúrate de que la imagen esté por encima del círculo */
+  }
+
+  /* Círculo gris en el centro */
+.circle {
+    position: absolute;
+    top:39%; /* Centrado verticalmente */
+    left: 65.5%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Para centrar completamente */
+    width: 300px; /* Ajusta el tamaño del círculo */
+    height: 300px; /* Ajusta el tamaño del círculo */
+    background-color: #363636; /* Color gris */
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    z-index: 0; /* Coloca el círculo detrás del texto */
+  }
+  
+  /* Ajustes de responsividad */
+  @media (max-width: 768px) {
+    .neon-text {
+      font-size: 2rem;
+    }
+  
+    .subtext {
+      font-size: 1.2rem;
+    }
+  
+    .chico-img {
+      max-width: 100%;
+      transform: none; /* Resetea la posición en pantallas pequeñas */
+      right: 0;
+      top: 0;
+    }
+
+    .circle {
+        width: 150px; /* Ajusta el tamaño del círculo en pantallas pequeñas */
+        height: 150px; /* Ajusta el tamaño del círculo en pantallas pequeñas */
+    }
+  }
+  
+
+/* Sección Sobre Nosotros */
+.about-section {
+    background-color: #ffffff; /* Fondo negro */
+    color: #000000; /* Texto negro */
+    padding: 60px 0; /* Espaciado arriba y abajo */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.sobre-title {
+    font-size: 2.5rem; /* Tamaño de letra para el título */
+    margin-bottom: 90px; /* Espaciado inferior */
+}
+
+.sobre-title .sobre-white {
+    color: #000000; /* Color blanco para "Sobre" */
+}
+
+.sobre-title .sobre-blue {
+    color: #0084F4; /* Color #0084F4 para "Nosotros" */
+}
+
+.about-text {
+    color: #8d8d8d; /* Color gris para el texto principal */
+    font-size: 2rem; /* Tamaño de letra para el texto */
+}
+
+.about-highlight {
+    color: #0084F4; /* Color #0084F4 para la frase destacada */
+    font-size: 2rem; /* Tamaño de letra para la frase destacada */
+}
+
+.about-section img {
+    max-width: 55%; /* Ajusta el tamaño máximo de la imagen al 80% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 60px;
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Sección Servicios */
+.services-section {
+    background-color: #E7E7E7; /* Fondo gris claro */
+    color: #000; /* Texto negro */
+    padding: 60px 0; /* Espaciado arriba y abajo */
+}
+
+.services-title {
+    font-size: 2.5rem; /* Tamaño de letra para el título */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+.services-title .services-black {
+    color: #000; /* Color negro para "Nuestros" */
+}
+
+.services-title .services-blue {
+    color: #0084F4; /* Color azul para "Servicios" */
+}
+
+.service-img {
+    width: 100%; /* Asegúrate de que las imágenes sean responsivas */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+.services-section .card-img-top {
+  transition: transform 0.3s ease; /* Transición suave para el efecto */
+}
+
+.services-section .card:hover .card-img-top {
+  transform: scale(1.1) rotate(3deg); /* Escala y rotación al pasar el cursor */
+}
+
+
+
+/* Sección Beneficios */
+.benefits-section {
+  background-color: #fff;
+  color: #000;
+  padding: 60px 0;
+}
+
+.benefits-title {
+  font-size: 2.5rem;
+  text-align: right;
+  color: #0084F4;
+  margin-bottom: 30px;
+}
+
+/* Contenedor de cada beneficio */
+.benefit-wrapper {
+  position: relative;
+  margin-bottom: 40px; /* Espacio mayor para la información */
+  overflow: hidden;
+  height: 60px; /* Asegúrate de que el contenedor tenga la misma altura que la tira */
+}
+
+/* Tiras de beneficios */
+.benefit-item {
+  background-color: #0084F4;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: transform 0.5s ease; /* Suaviza la animación */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ocupa toda la altura del contenedor */
+  z-index: 1; /* Asegura que la tira esté encima de la información */
+}
+
+/* Información detrás de la tira */
+.benefit-info {
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 100%; /* Ocupa toda la altura del contenedor */
+  z-index: 0; /* Coloca la información detrás de la tira */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Oculta inicialmente */
+  transition: opacity 0.5s ease; /* Suaviza la aparición de la información */
+}
+
+/* Cuando la tira se mueve, revela la información */
+.benefit-item.active {
+  transform: translateX(110%); /* Desplaza la tira completamente fuera de la vista */
+}
+
+.benefit-item.active + .benefit-info {
+  opacity: 1; /* Muestra la información cuando la tira está activa */
+}
+
+/* Imagen más pequeña */
+.chica-img {
+  max-width: 70%;
+  height: auto;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .benefits-title {
+      text-align: center;
+  }
+
+  .benefit-item {
+      font-size: 1rem;
+  }
+}
+
+
+/* Sección de contacto */
+.contact-section {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contact-section h3 a.contact-link {
+  font-size: 2rem;
+  color: #0084F4;
+  text-decoration: none;
+  margin-bottom: 70px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.contact-info li i {
+  margin-right: 10px;
+  color: #0084F4;
+  font-size: 1.2rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #0084F4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #006bbd;
+}
+
+
+/* Estilos del footer */
+.footer {
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  height: 150px; /* Ajusta la altura del logo según sea necesario */
+}
+
+.footer-text h4 {
+  margin: 0;
+  font-weight: bold; /* Negrita */
+}
+
+.footer-text ul {
+  list-style: none; /* Sin viñetas */
+  padding: 0;
+  margin: 5px 0 0; /* Margen superior */
+}
+
+.footer-text li {
+  margin: 5px 0; /* Espaciado entre elementos de la lista */
+}
+
+.footer-text a {
+  color: #fff; /* Color blanco para enlaces */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.footer-buttons {
+  display: flex; /* Alinear botones horizontalmente */
+}
+
+.app-button {
+  margin-left: 10px; /* Espaciado entre botones */
+  height: 40px; /* Ajusta la altura de los botones */
+}
