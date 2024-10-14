@@ -402,9 +402,12 @@ body, html {
 
 .footer-buttons {
   display: flex; /* Alinear botones horizontalmente */
+  flex-direction: column; /* Coloca los botones uno debajo del otro */
 }
 
 .app-button {
   margin-left: 10px; /* Espaciado entre botones */
-  height: 40px; /* Ajusta la altura de los botones */
+  height: 80px; /* Ajusta la altura de los botones */
+  width: 200px; /* Ajusta el ancho de los botones */
 }
+
