@@ -43,59 +43,80 @@ body, html {
   background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro al fijarse */
 }
   
-  /* Barra de navegación */
-  .navbar-dark .navbar-nav .nav-link.active {
-    color: #0084F4; /* Cambia el color a 0084F4 */
-  }
+/* Barra de navegación */
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #0084F4; /* Cambia el color a 0084F4 */
+}
+ 
+.navbar-dark .navbar-nav .nav-link {
+  color: #ddd; /* Colores para el resto de las opciones */
+}
   
-  .navbar-dark .navbar-nav .nav-link {
-    color: #ddd; /* Colores para el resto de las opciones */
-  }
+.navbar-brand {
+  color: #0084F4; /* Color del logo */
+}
   
-  .navbar-brand {
-    color: #0084F4; /* Color del logo */
-  }
-  
-  .navbar-dark .navbar-toggler {
-    border-color: #0084F4;
-  }
-  
-  /* Sección Hero */
-  .hero-section {
-    animation: slideDown 1s ease-in-out; /* 1 segundo de duración */
-    background-color: #000; /* Fondo negro */
-    color: #fff;
-    min-height: 100vh;
-    padding-top: 200px; /* Ajusta este valor para mover el texto más arriba */
-    padding-bottom: 50px; /* Añade un margen inferior para crear espacio */
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .neon-text {
-    font-size: 3.5rem;
-    font-weight: bold;
-    color: #fff; /* Letras en blanco */
-    text-shadow: 
-      0 0 5px #0084F4,   /* Brillo cerca del texto */
-      0 0 10px #0084F4,  /* Brillo intermedio */
-      0 0 20px #0084F4,  /* Más brillo */
-      0 0 40px #0084F4,  /* Extiende el brillo para el efecto neón */
-      0 0 80px #0084F4;  /* Último nivel de brillo */
-  }
-  
-  .subtext {
-    font-size: 2rem;
-    margin-top: 20px;
-    color: #ddd; /* Subtexto en gris claro */
-    text-shadow: 
-        0 0 5px #fff,     /* Brillo cerca del subtexto en blanco */
-        0 0 10px #fff;    /* Brillo intermedio */
-  }
+.navbar-dark .navbar-toggler {
+  border-color: #0084F4;
+ }
 
-  .btn {
-    margin-top: 15px; /* Espacio superior */
+.language-btn {
+  background-color: #0084F4;
+  color:#ffffff;
+  border-radius: 20px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.language-btn:hover {
+  background-color: #006bb3;
+  color: #ffffff;
+  border-color: #0084F4;
+}
+
+.language-btn:active {
+  background-color: #00528a;
+  color: #ffffff;
+  border-color: #00528a;
+}
+
+/* Sección Hero */
+.hero-section {
+  animation: slideDown 1s ease-in-out; /* 1 segundo de duración */
+  background-color: #000; /* Fondo negro */
+  color: #fff;
+  min-height: 100vh;
+  padding-top: 200px; /* Ajusta este valor para mover el texto más arriba */
+  padding-bottom: 50px; /* Añade un margen inferior para crear espacio */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+  
+.neon-text {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff; /* Letras en blanco */
+  text-shadow: 
+    0 0 5px #0084F4,   /* Brillo cerca del texto */
+    0 0 10px #0084F4,  /* Brillo intermedio */
+    0 0 20px #0084F4,  /* Más brillo */
+    0 0 40px #0084F4,  /* Extiende el brillo para el efecto neón */
+    0 0 80px #0084F4;  /* Último nivel de brillo */
+}
+  
+.subtext {
+  font-size: 2rem;
+  margin-top: 20px;
+  color: #ddd; /* Subtexto en gris claro */
+  text-shadow: 
+     0 0 5px #fff,     /* Brillo cerca del subtexto en blanco */
+     0 0 10px #fff;    /* Brillo intermedio */
+}
+
+.btn {
+  margin-top: 15px; /* Espacio superior */
 }
   
   /* Imagen del chico */
@@ -121,29 +142,29 @@ body, html {
     border-radius: 50%; /* Hace que el div sea un círculo */
     z-index: 0; /* Coloca el círculo detrás del texto */
   }
-  
-  /* Ajustes de responsividad */
-  @media (max-width: 768px) {
-    .neon-text {
-      font-size: 2rem;
-    }
-  
-    .subtext {
-      font-size: 1.2rem;
-    }
-  
-    .chico-img {
-      max-width: 100%;
-      transform: none; /* Resetea la posición en pantallas pequeñas */
-      right: 0;
-      top: 0;
-    }
 
-    .circle {
-        width: 150px; /* Ajusta el tamaño del círculo en pantallas pequeñas */
-        height: 150px; /* Ajusta el tamaño del círculo en pantallas pequeñas */
-    }
-  }
+  /* Ajustes de responsividad */
+@media (max-width: 768px) {
+  .neon-text {
+    font-size: 2rem;
+   }
+ 
+   .subtext {
+     font-size: 1.2rem;
+   }
+ 
+   .chico-img {
+     max-width: 100%;
+     transform: none; /* Resetea la posición en pantallas pequeñas */
+     right: 0;
+     top: 0;
+   }
+
+  .circle {
+      width: 150px; /* Ajusta el tamaño del círculo en pantallas pequeñas */
+       height: 150px; /* Ajusta el tamaño del círculo en pantallas pequeñas */
+   } 
+}
   
 
 /* Sección Sobre Nosotros */
@@ -237,19 +258,19 @@ body, html {
 /* Contenedor de cada beneficio */
 .benefit-wrapper {
   position: relative;
-  margin-bottom: 40px; /* Espacio mayor para la información */
+  margin-bottom: 50px; /* Espacio mayor para la información */
   overflow: hidden;
-  height: 60px; /* Asegúrate de que el contenedor tenga la misma altura que la tira */
+  height: 100px; /* Asegúrate de que el contenedor tenga la misma altura que la tira */
 }
 
 /* Tiras de beneficios */
 .benefit-item {
   background-color: #0084F4;
   color: #fff;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
-  font-size: 1.2rem;
-  border-radius: 5px;
+  font-size: 1.8rem;
+  border-radius: 8px;
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -266,14 +287,16 @@ body, html {
 /* Información detrás de la tira */
 .benefit-info {
   background-color: #f1f1f1;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 20px;
+  font-size: 1.3rem;
+  border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   height: 100%; /* Ocupa toda la altura del contenedor */
   z-index: 0; /* Coloca la información detrás de la tira */
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   opacity: 0; /* Oculta inicialmente */
   transition: opacity 0.5s ease; /* Suaviza la aparición de la información */
 }
@@ -296,12 +319,9 @@ body, html {
 /* Ajustes responsivos */
 @media (max-width: 768px) {
   .benefits-title {
-      text-align: center;
+    text-align: center;
   }
 
-  .benefit-item {
-      font-size: 1rem;
-  }
 }
 
 
