@@ -42,23 +42,20 @@ body, html {
   transition: background-color 0.3s ease; /* Suaviza la transición de fondo */
   background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro al fijarse */
 }
-  
-/* Barra de navegación */
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #0084F4; /* Cambia el color a 0084F4 */
-}
- 
+
 .navbar-dark .navbar-nav .nav-link {
-  color: #ddd; /* Colores para el resto de las opciones */
+  position: relative; /* Para el efecto de pseudo-elemento */
+  padding: 8px 16px; /* Espaciado interno */
+  transition: color 0.3s ease; /* Transición suave para el color */
 }
-  
-.navbar-brand {
-  color: #0084F4; /* Color del logo */
+
+.nav-link:hover {
+  color: #5a83ac;
 }
-  
-.navbar-dark .navbar-toggler {
-  border-color: #0084F4;
- }
+
+.nav-link:active {
+  color: #0084F4;
+}
 
 .language-btn {
   background-color: #0084F4;
@@ -130,19 +127,6 @@ body, html {
     z-index: 1; /* Asegúrate de que la imagen esté por encima del círculo */
   }
 
-  /* Círculo gris en el centro */
-.circle {
-    position: absolute;
-    top:39%; /* Centrado verticalmente */
-    left: 65.5%; /* Centrado horizontalmente */
-    transform: translate(-50%, -50%); /* Para centrar completamente */
-    width: 300px; /* Ajusta el tamaño del círculo */
-    height: 300px; /* Ajusta el tamaño del círculo */
-    background-color: #363636; /* Color gris */
-    border-radius: 50%; /* Hace que el div sea un círculo */
-    z-index: 0; /* Coloca el círculo detrás del texto */
-  }
-
   /* Ajustes de responsividad */
 @media (max-width: 768px) {
   .neon-text {
@@ -158,14 +142,8 @@ body, html {
      transform: none; /* Resetea la posición en pantallas pequeñas */
      right: 0;
      top: 0;
-   }
-
-  .circle {
-      width: 150px; /* Ajusta el tamaño del círculo en pantallas pequeñas */
-       height: 150px; /* Ajusta el tamaño del círculo en pantallas pequeñas */
    } 
 }
-  
 
 /* Sección Sobre Nosotros */
 .about-section {
